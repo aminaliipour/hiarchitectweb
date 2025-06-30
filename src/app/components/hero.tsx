@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState, FormEvent, ChangeEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, User, Phone } from "lucide-react";
+import Image from "next/image";
 import type { Project, FormData as ContactFormData, Rotation, ProjectImage } from "../types";
 
 // Custom ChevronDown component (SVG icon)
@@ -75,7 +76,7 @@ const initialProjectsData: Project[] = [
 
 
 const Hero: React.FC = () => {
-  const [activeProject, setActiveProject] = useState<number | null>(null);
+  // const [activeProject, setActiveProject] = useState<number | null>(null);
   const [formVisible, setFormVisible] = useState(false);
   const [formData, setFormData] = useState<ContactFormData>({ name: "", email: "", phone: "", message: "" });
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -139,12 +140,12 @@ const Hero: React.FC = () => {
     return () => clearInterval(interval);
   }, [dynamicProjects]); 
 
-  const handleProjectClick = (projectId: number) => { // Use projectId to find index if needed or pass index directly
-    const projectIndex = dynamicProjects.findIndex(p => p.id === projectId);
-    if (projectIndex !== -1) {
-      setActiveProject(activeProject === projectIndex ? null : projectIndex);
-    }
-  };
+  // const handleProjectClick = (projectId: number) => { // Use projectId to find index if needed or pass index directly
+  //   const projectIndex = dynamicProjects.findIndex(p => p.id === projectId);
+  //   if (projectIndex !== -1) {
+  //     setActiveProject(activeProject === projectIndex ? null : projectIndex);
+  //   }
+  // };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -156,7 +157,7 @@ const Hero: React.FC = () => {
     alert("درخواست شما با موفقیت ارسال شد! به زودی با شما تماس خواهیم گرفت.");
     setFormData({ name: "", email: "", phone: "", message: "" });
     setFormVisible(false);
-    setActiveProject(null); // Also close active project popup
+    // setActiveProject(null); // Also close active project popup
   };
 
   const shapeVariants = {
@@ -263,12 +264,13 @@ const Hero: React.FC = () => {
                   animate="visible"
                   className="absolute inset-0 shadow-2xl" 
                 >
-                  <img
+                  <Image
                     src={currentImage.src}
                     alt={`${project.title} - ${currentImage.badge}`}
-                    className="w-full h-full object-cover rounded-xl"
+                    fill
+                    className="object-cover rounded-xl"
                     style={{ maskImage: "linear-gradient(to top, transparent 15%, black 70%)" }} 
-                    loading="lazy" // Lazy load images
+                    unoptimized
                   />
                   <motion.div
                     className="absolute bottom-2 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-black/75 text-white text-xs rounded-full backdrop-blur-sm"
@@ -288,7 +290,7 @@ const Hero: React.FC = () => {
       <div className="relative z-10 flex h-full flex-col items-center justify-between py-8 sm:py-12 px-4 sm:px-6 text-center">
         <div className="flex flex-col items-center">
           <div className="mb-4 sm:mb-6">
-            <img
+            <Image
               src="/images/Hi-logo.png" 
               alt="لوگوی های آرشیتکت"
               width={180} 

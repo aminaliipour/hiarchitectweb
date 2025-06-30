@@ -28,7 +28,7 @@ export default function Timeline() {
 
   const milestones = [
     {
-      year: "۱۳۹۵",
+      year: "1395",
       title: "تأسیس در لاهیجان",
       description:
         "های آرشیتکت با چشم‌انداز ترکیب زیبایی‌شناسی سنتی لاهیجان با اصول طراحی مدرن تأسیس شد.",
