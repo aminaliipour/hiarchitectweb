@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* برای compensation navbar */
+}
+
+/* Enhanced smooth scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom scrollbar for better visual */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fbbf24;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -14,8 +45,112 @@
   }
 }
 
+
+/* Custom font faces for Vazirmatn font */
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Morabba font faces */
+@font-face {
+  font-family: Morabba;
+  src: url('/fonts/Morabba.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Morabba;
+  src: url('/fonts/Morabba Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  direction: rtl;
+  font-family: Morabba, Vazirmatn, sans-serif !important;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 70% 30%, #fbbf24 0%, #fbbf2400 40%), /* زرد لوگو */
+    radial-gradient(circle at 30% 70%, #d1d5db 0%, #d1d5db00 40%), /* خاکستری */
+    linear-gradient(135deg, #fffbe6 0%, #f3f4f6 100%); /* پس‌زمینه خیلی روشن */
+  background-blend-mode: lighten, lighten, normal;
+}
+
+.dark body {
+  background:
+    radial-gradient(circle at 70% 30%, #fbbf24 0%, #fbbf2400 40%),
+    radial-gradient(circle at 30% 70%, #374151 0%, #37415100 40%),
+    linear-gradient(135deg, #18181b 0%, #23272e 100%);
+  background-blend-mode: lighten, lighten, normal;
 }
