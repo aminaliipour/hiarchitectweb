@@ -205,7 +205,6 @@ const Hero: React.FC = () => {
       x: 0,
       y: 0,
       rotate: 0,
-      transition: { duration: 1, ease: "easeOut" },
     },
     exit: {
       opacity: 0,
@@ -213,7 +212,6 @@ const Hero: React.FC = () => {
       x: isClient ? getRandomOffset(-70, 70) : 0,
       y: isClient ? getRandomOffset(-70, 70) : 0,
       rotate: isClient ? getRandomOffset(25, 250) : 0,
-      transition: { duration: 0.8, ease: "easeInOut" },
     },
   };
   
@@ -262,6 +260,7 @@ const Hero: React.FC = () => {
                   variants={depthVariants}
                   initial="hidden"
                   animate="visible"
+                  transition={{ duration: 1 }}
                   className="absolute inset-0 shadow-2xl" 
                 >
                   <Image
