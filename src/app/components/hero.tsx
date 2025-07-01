@@ -30,47 +30,57 @@ const getStaticPosition = (index: number) => ({
   y: `${20 + (index * 20) % 50}%`
 });
 
-const baseImagePaths = [
-  "/images/projects/kazheh/final/1.jpg",
-  "/images/projects/kazheh/final/2.jpg",
-  "/images/projects/kazheh/final/3.jpg",
-  "/images/projects/kazheh/final/4.jpg",
-  "/images/projects/kazheh/final/5.jpg",
-];
-
 // Define initial project data (positions will be randomized later)
 const initialProjectsData: Project[] = [
   {
     id: 1,
-    title: "کافه کازه نوین",
-    description: "تحول یک کافه سنتی با طراحی معاصر در لاهیجان، با استفاده از متریال مدرن و نورپردازی خلاقانه برای ایجاد فضایی دلنشین و به‌یادماندنی.",
-    images: baseImagePaths.map((src, i) => ({ src, badge: `نمای کافه ${i + 1}` })),
+    title: "طلافروشی آوین گلد",
+    description: "تحول یک طلافروشی سنتی با طراحی معاصر، با استفاده از متریال مدرن و نورپردازی خلاقانه برای ایجاد فضایی لوکس و جذاب.",
+    images: [
+      { src: "/images/projects/تجاری/آوین گلد/2025_06_28_11_25_IMG_7151.JPG", badge: "نمای داخلی" },
+      { src: "/images/projects/تجاری/آوین گلد/2025_06_28_11_25_IMG_7152.JPG", badge: "ویترین" },
+      { src: "/images/projects/تجاری/آوین گلد/2025_06_28_11_25_IMG_7153.JPG", badge: "طراحی نهایی" },
+      { src: "/images/slides/طلافروشی آوین.JPG", badge: "نمای کلی" },
+    ],
     position: { x: "0%", y: "0%" }, // Placeholder, will be randomized
-    details: "۲۰۲۴ • ۴۵۰ مترمربع • تجاری",
+    details: "۲۰۲۴ • ۱۰۰ مترمربع • تجاری",
   },
   {
     id: 2,
-    title: "چیدمان داخلی لوکس",
-    description: "طراحی داخلی با الهام از طبیعت و هنر ایرانی، ایجاد فضایی آرام، زیبا و کاربردی با جزئیات دقیق و سفارشی.",
-    images: [...baseImagePaths.slice(1), baseImagePaths[0]].map((src, i) => ({ src, badge: `فضای داخلی ${i + 1}` })),
+    title: "ویلای گلپور",
+    description: "طراحی ویلای مدرن با الهام از طبیعت، ایجاد فضایی آرام و زیبا با چشم‌انداز بی‌نظیر به طبیعت.",
+    images: [
+      { src: "/images/projects/ویلایی/ویلا گلپور/1.jpg", badge: "نمای بیرونی" },
+      { src: "/images/projects/ویلایی/ویلا گلپور/2.jpg", badge: "فضای داخلی" },
+      { src: "/images/projects/ویلایی/ویلا گلپور/3.jpg", badge: "اتاق پذیرایی" },
+      { src: "/images/projects/ویلایی/ویلا گلپور/4.jpg", badge: "آشپزخانه" },
+    ],
     position: { x: "0%", y: "0%" }, // Placeholder
-    details: "۲۰۲۴ • ۲۰۰ مترمربع • مسکونی",
+    details: "۲۰۲۴ • ۳۰۰ مترمربع • ویلایی",
   },
   {
     id: 3,
-    title: "ویلای مدرن ساحلی",
-    description: "ویلایی با طراحی مینیمال و پایدار، ارائه چشم‌اندازهای بی‌نظیر به دریا و جنگل، با تاکید بر ادغام فضای داخلی و خارجی.",
-    images: [...baseImagePaths.slice(2), ...baseImagePaths.slice(0,2)].map((src, i) => ({ src, badge: `چشم‌انداز ویلا ${i + 1}` })),
+    title: "بوتیک سیران",
+    description: "طراحی داخلی بوتیک مدرن با فضای جذاب و کاربردی برای عرضه محصولات فشن و پوشاک.",
+    images: [
+      { src: "/images/slides/بوتیک سیران.jpg", badge: "نمای بوتیک" },
+      { src: "/images/slides/سالن زیبایی ال بیوتی.jpg", badge: "فضای فروش" },
+      { src: "/images/slides/کلینیک زیبایی سروش.jpeg", badge: "طراحی داخلی" },
+    ],
     position: { x: "0%", y: "0%" }, // Placeholder
-    details: "۲۰۲۳ • ۶۰۰ مترمربع • مسکونی",
+    details: "۲۰۲۴ • ۸۰ مترمربع • تجاری",
   },
   {
     id: 4,
-    title: "ویلای مدرن ساحلی",
-    description: "ویلایی با طراحی مینیمال و پایدار، ارائه چشم‌اندازهای بی‌نظیر به دریا و جنگل، با تاکید بر ادغام فضای داخلی و خارجی.",
-    images: [...baseImagePaths.slice(3), ...baseImagePaths.slice(0,3)].map((src, i) => ({ src, badge: `چشم‌انداز ویلا ${i + 1}` })),
+    title: "پروژه‌های ویلایی",
+    description: "مجموعه‌ای از پروژه‌های ویلایی با طراحی منحصر به فرد و هماهنگ با طبیعت اطراف.",
+    images: [
+      { src: "/images/slides/ویلا بازغی.JPG", badge: "ویلا بازغی" },
+      { src: "/images/slides/ویلا سوستان.jpg", badge: "ویلا سوستان" },
+      { src: "/images/slides/ویلای زمیدان.jpg", badge: "ویلای زمیدان" },
+    ],
     position: { x: "0%", y: "0%" }, // Placeholder
-    details: "۲۰۲۳ • ۶۰۰ مترمربع • مسکونی",
+    details: "۲۰۲۳-۲۰۲۴ • ویلایی",
   },
 ];
 
