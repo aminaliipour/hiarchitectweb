@@ -2,6 +2,7 @@
   "platform": "next",
   "app": "hiarchi",
   "port": 3000,
+  "node": "20",
   "buildCommand": "npm run build",
   "startCommand": "npm start"
 }
