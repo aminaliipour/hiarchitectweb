@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const heroSlides = [
@@ -101,10 +100,6 @@ export default function HeroSlider() {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   };
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
   return (
     <section 
       className="relative h-screen overflow-hidden bg-black"
@@ -123,12 +118,10 @@ export default function HeroSlider() {
         >
           {/* Background Image */}
           <div className="absolute inset-0">
-            <Image
+            <img
               src={heroSlides[currentSlide].image}
               alt={heroSlides[currentSlide].title}
-              fill
-              className="object-cover"
-              priority
+              className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40" />
           </div>
@@ -203,20 +196,7 @@ export default function HeroSlider() {
         <ChevronRight className="h-6 w-6" />
       </button>
 
-      {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-3">
-        {heroSlides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? 'w-12 bg-yellow-500'
-                : 'w-2 bg-white/30 hover:bg-white/60'
-            }`}
-          />
-        ))}
-      </div>
+      {/* Slide Indicators - removed */}
 
       {/* Project Info Panel */}
       <motion.div

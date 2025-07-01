@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState, FormEvent, ChangeEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, User, Phone } from "lucide-react";
-import Image from "next/image";
 import type { Project, FormData as ContactFormData, Rotation, ProjectImage } from "../types";
 
 // Custom ChevronDown component (SVG icon)
@@ -273,13 +272,11 @@ const Hero: React.FC = () => {
                   transition={{ duration: 1 }}
                   className="absolute inset-0 shadow-2xl" 
                 >
-                  <Image
+                  <img
                     src={currentImage.src}
                     alt={`${project.title} - ${currentImage.badge}`}
-                    fill
-                    className="object-cover rounded-xl"
+                    className="h-full w-full object-cover rounded-xl"
                     style={{ maskImage: "linear-gradient(to top, transparent 15%, black 70%)" }} 
-                    unoptimized
                   />
                   <motion.div
                     className="absolute bottom-2 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-black/75 text-white text-xs rounded-full backdrop-blur-sm"
@@ -299,7 +296,7 @@ const Hero: React.FC = () => {
       <div className="relative z-10 flex h-full flex-col items-center justify-between py-8 sm:py-12 px-4 sm:px-6 text-center">
         <div className="flex flex-col items-center">
           <div className="mb-4 sm:mb-6">
-            <Image
+            <img
               src="/images/Hi-logo.png" 
               alt="لوگوی های آرشیتکت"
               width={180} 
