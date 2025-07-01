@@ -56,7 +56,7 @@ export default function Navigation() {
       <motion.div
         initial={{ opacity: 0, scale: 0.4 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0, duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+        transition={{ delay: 0, duration: 0.8, ease: "easeOut" }}
         className="fixed top-8 left-8 z-[60]"
       >
         <Link href="/" className="flex items-center">

@@ -205,7 +205,7 @@ const Hero: React.FC = () => {
       x: 0,
       y: 0,
       rotate: 0,
-      transition: { duration: 1, ease: [0.16, 1, 0.3, 1] },
+      transition: { duration: 1, ease: "easeOut" },
     },
     exit: {
       opacity: 0,
@@ -213,7 +213,7 @@ const Hero: React.FC = () => {
       x: isClient ? getRandomOffset(-70, 70) : 0,
       y: isClient ? getRandomOffset(-70, 70) : 0,
       rotate: isClient ? getRandomOffset(25, 250) : 0,
-      transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 0.8, ease: "easeInOut" },
     },
   };
   
