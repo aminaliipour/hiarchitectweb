@@ -142,9 +142,30 @@ export const metadata: Metadata = {
     // google: 'your-google-verification-code',
   },
   icons: {
-    icon: '/images/Hi-logo-icon.png',
+    icon: [
+      { url: '/images/Hi-logo-icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/Hi-logo-icon.png', sizes: '16x16', type: 'image/png' },
+      { url: '/images/Hi-logo-icon.png', sizes: '192x192', type: 'image/png' },
+      { url: '/images/Hi-logo-icon.png', sizes: '512x512', type: 'image/png' }
+    ],
     shortcut: '/images/Hi-logo-icon.png',
-    apple: '/images/Hi-logo-icon.png',
+    apple: [
+      { url: '/images/Hi-logo-icon.png', sizes: '180x180', type: 'image/png' }
+    ],
+    other: [
+      {
+        rel: 'icon',
+        url: '/images/Hi-logo-icon.png',
+        sizes: '32x32',
+        type: 'image/png'
+      },
+      {
+        rel: 'icon',
+        url: '/images/Hi-logo-icon.png',
+        sizes: '16x16',
+        type: 'image/png'
+      }
+    ]
   },
 };
 
@@ -351,11 +372,25 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         
         {/* Favicon - ساده و مؤثر */}
-        <link rel="icon" href="/images/Hi-logo-icon.png" type="image/png" sizes="any" />
-        <link rel="shortcut icon" href="/images/Hi-logo-icon.png" type="image/png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/Hi-logo-icon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/Hi-logo-icon.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         
         {/* Apple Touch Icon */}
-        <link rel="apple-touch-icon" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/Hi-logo-icon.png" />
+        
+        {/* Android Chrome Icons */}
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/Hi-logo-icon.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/images/Hi-logo-icon.png" />
         
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
