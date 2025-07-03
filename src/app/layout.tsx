@@ -142,19 +142,9 @@ export const metadata: Metadata = {
     // google: 'your-google-verification-code',
   },
   icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: '32x32' },
-      { url: '/images/Hi-logo-icon.png', sizes: '32x32', type: 'image/png' },
-      { url: '/images/Hi-logo-icon.png', sizes: '16x16', type: 'image/png' }
-    ],
-    shortcut: '/favicon.ico',
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
-    ],
-    other: [
-      { rel: 'icon', url: '/favicon.ico', sizes: '32x32' },
-      { rel: 'apple-touch-icon', url: '/apple-touch-icon.png' }
-    ]
+    icon: '/images/Hi-logo-icon.png',
+    shortcut: '/images/Hi-logo-icon.png',
+    apple: '/images/Hi-logo-icon.png',
   },
 };
 
@@ -360,14 +350,12 @@ export default function RootLayout({
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="manifest" href="/manifest.json" />
         
-        {/* Favicon و آیکون‌های مختلف - ترتیب مهمه! */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" href="/images/Hi-logo-icon.png" type="image/png" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        {/* Favicon - ساده و مؤثر */}
+        <link rel="icon" href="/images/Hi-logo-icon.png" type="image/png" sizes="any" />
+        <link rel="shortcut icon" href="/images/Hi-logo-icon.png" type="image/png" />
         
-        {/* Apple Touch Icons */}
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        {/* Apple Touch Icon */}
+        <link rel="apple-touch-icon" href="/images/Hi-logo-icon.png" />
         
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
