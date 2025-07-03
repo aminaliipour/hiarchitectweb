@@ -36,6 +36,63 @@ export default function ProjectDetailPage() {
     fetchProject();
   }, [slug]);
 
+  // Update document title and meta when project loads
+  useEffect(() => {
+    if (project) {
+      document.title = `${project.title} | پروژه ${project.category} | های آرشیتکت`;
+      
+      // Update meta description
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', 
+          `پروژه ${project.category} ${project.title} - شرکت معماری های آرشیتکت | طراحی و اجرای پروژه‌های معماری در لاهیجان و گیلان`
+        );
+      }
+
+      // Add JSON-LD structured data for project
+      const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": project.title,
+        "description": `پروژه ${project.category} ${project.title} - شرکت معماری های آرشیتکت`,
+        "image": project.images,
+        "creator": {
+          "@type": "Organization",
+          "name": "شرکت معماری های آرشیتکت",
+          "url": "https://hiarchitect.ir"
+        },
+        "dateCreated": "2024",
+        "genre": project.category,
+        "keywords": [
+          project.category,
+          "معماری",
+          "طراحی",
+          "لاهیجان",
+          "گیلان",
+          project.title
+        ].join(", "),
+        "url": `https://hiarchitect.ir/project/${slug}`,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://hiarchitect.ir/project/${slug}`
+        }
+      };
+
+      // Remove existing project schema
+      const existingSchema = document.querySelector('script[data-schema="project"]');
+      if (existingSchema) {
+        existingSchema.remove();
+      }
+
+      // Add new schema
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.setAttribute('data-schema', 'project');
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
+  }, [project, slug]);
+
   // Debug state changes
   useEffect(() => {
     console.log('Lightbox state changed:', { lightboxOpen, lightboxImageIndex });

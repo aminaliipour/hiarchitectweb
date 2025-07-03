@@ -8,9 +8,35 @@ Sitemap: https://hiarchitect.ir/sitemap.xml
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
+Disallow: /*.json$
 
 # Allow all static assets
 Allow: /images/
 Allow: /fonts/
 Allow: *.css
 Allow: *.js
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.webp
+Allow: *.svg
+Allow: *.ico
+
+# Special instructions for specific search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Block some common bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

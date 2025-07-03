@@ -1,0 +1,41 @@
+{
+  "name": "شرکت معماری های آرشیتکت",
+  "short_name": "های آرشیتکت",
+  "description": "شرکت معماری و طراحی های آرشیتکت - ارائه خدمات تخصصی طراحی معماری، طراحی داخلی، نظارت و اجرای پروژه‌های تجاری، مسکونی و ویلایی در لاهیجان و گیلان",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "dir": "rtl",
+  "lang": "fa",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/images/Hi-logo-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/Hi-logo-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": [
+    "business",
+    "architecture",
+    "design",
+    "construction"
+  ],
+  "screenshots": [
+    {
+      "src": "/images/Hi-logo.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}
