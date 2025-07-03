@@ -20,18 +20,71 @@ export const metadata: Metadata = {
   },
   description: "شرکت معماری و طراحی های آرشیتکت - ارائه خدمات تخصصی طراحی معماری، طراحی داخلی، نظارت و اجرای پروژه‌های تجاری، مسکونی و ویلایی در لاهیجان و گیلان",
   keywords: [
+    // کلمات کلیدی اصلی
     "معماری لاهیجان",
-    "طراحی معماری گیلان", 
+    "طراحی معماری گیلان",
     "معمار لاهیجان",
-    "طراحی داخلی لاهیجان",
-    "پروژه های معماری",
-    "طراحی ویلا",
-    "طراحی مسکونی",
-    "طراحی تجاری",
-    "نقشه کشی ساختمان",
-    "معماری مدرن",
+    "آرشیتکت لاهیجان",
     "های آرشیتکت",
-    "Hi Architect"
+    "Hi Architect",
+    
+    // خدمات طراحی
+    "طراحی داخلی لاهیجان",
+    "دکوراسیون داخلی گیلان",
+    "طراحی منظر لاهیجان",
+    "نقشه کشی ساختمان",
+    "طراحی نما ساختمان",
+    "طراحی پلان ساختمان",
+    
+    // انواع پروژه‌ها
+    "طراحی ویلا لاهیجان",
+    "طراحی ویلا گیلان",
+    "طراحی مسکونی لاهیجان",
+    "طراحی آپارتمان گیلان",
+    "طراحی تجاری لاهیجان",
+    "طراحی مغازه گیلان",
+    "طراحی رستوران",
+    "طراحی کافه",
+    "طراحی دفتر کار",
+    "طراحی کلینیک",
+    "طراحی سالن زیبایی",
+    
+    // خدمات تخصصی
+    "نظارت بر اجرا",
+    "مشاوره معماری",
+    "ارزیابی ساختمان",
+    "بازسازی ساختمان",
+    "تغییر کاربری",
+    "اخذ پروانه ساختمانی",
+    
+    // مناطق خدمات‌رسانی
+    "معماری رشت",
+    "طراحی داخلی رشت",
+    "معماری آستارا",
+    "طراحی بندر انزلی",
+    "معماری صومعه سرا",
+    "طراحی فومن",
+    "معماری آستانه اشرفیه",
+    "طراحی رودسر",
+    
+    // سبک‌های معماری
+    "معماری مدرن",
+    "معماری کلاسیک",
+    "معماری مینیمال",
+    "معماری سنتی",
+    "معماری پایدار",
+    "معماری سبز",
+    "معماری اقلیمی",
+    
+    // کلمات مرتبط
+    "شرکت معماری گیلان",
+    "بهترین معمار لاهیجان",
+    "استودیو معماری",
+    "طراح داخلی حرفه‌ای",
+    "معماری لوکس",
+    "طراحی خلاقانه",
+    "اجرای دقیق",
+    "کیفیت بالا"
   ],
   authors: [{ name: "شرکت معماری های آرشیتکت" }],
   creator: "شرکت معماری های آرشیتکت",
@@ -83,9 +136,30 @@ export const metadata: Metadata = {
     // google: 'your-google-verification-code',
   },
   icons: {
-    icon: '/images/Hi-logo-icon.png',
+    icon: [
+      { url: '/images/Hi-logo-icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/Hi-logo-icon.png', sizes: '16x16', type: 'image/png' },
+      { url: '/images/Hi-logo-icon.png', sizes: '192x192', type: 'image/png' },
+      { url: '/images/Hi-logo-icon.png', sizes: '512x512', type: 'image/png' }
+    ],
     shortcut: '/images/Hi-logo-icon.png',
-    apple: '/images/Hi-logo-icon.png',
+    apple: [
+      { url: '/images/Hi-logo-icon.png', sizes: '57x57', type: 'image/png' },
+      { url: '/images/Hi-logo-icon.png', sizes: '60x60', type: 'image/png' },
+      { url: '/images/Hi-logo-icon.png', sizes: '72x72', type: 'image/png' },
+      { url: '/images/Hi-logo-icon.png', sizes: '76x76', type: 'image/png' },
+      { url: '/images/Hi-logo-icon.png', sizes: '114x114', type: 'image/png' },
+      { url: '/images/Hi-logo-icon.png', sizes: '120x120', type: 'image/png' },
+      { url: '/images/Hi-logo-icon.png', sizes: '144x144', type: 'image/png' },
+      { url: '/images/Hi-logo-icon.png', sizes: '152x152', type: 'image/png' },
+      { url: '/images/Hi-logo-icon.png', sizes: '180x180', type: 'image/png' }
+    ],
+    other: [
+      { rel: 'icon', url: '/images/Hi-logo-icon.png', sizes: '32x32' },
+      { rel: 'icon', url: '/images/Hi-logo-icon.png', sizes: '16x16' },
+      { rel: 'apple-touch-icon', url: '/images/Hi-logo-icon.png', sizes: '180x180' },
+      { rel: 'mask-icon', url: '/images/Hi-logo-icon.png', color: '#000000' }
+    ]
   },
 };
 
@@ -101,7 +175,7 @@ export default function RootLayout({
         "@type": "Organization",
         "@id": "https://hiarchitect.ir/#organization",
         "name": "شرکت معماری های آرشیتکت",
-        "alternateName": "Hi Architect",
+        "alternateName": ["Hi Architect", "آرشیتکت لاهیجان", "معماری لاهیجان", "طراحی داخلی گیلان"],
         "url": "https://hiarchitect.ir",
         "logo": {
           "@type": "ImageObject",
@@ -157,13 +231,31 @@ export default function RootLayout({
         "serviceType": [
           "طراحی معماری",
           "طراحی داخلی", 
+          "دکوراسیون داخلی",
           "نقشه کشی ساختمان",
           "نظارت بر اجرا",
           "مشاوره معماری",
           "طراحی منظر",
+          "طراحی نما ساختمان",
           "طراحی ویلا",
+          "طراحی مسکونی",
+          "طراحی آپارتمان",
           "طراحی مجتمع مسکونی",
-          "طراحی فضاهای تجاری"
+          "طراحی فضاهای تجاری",
+          "طراحی مغازه",
+          "طراحی رستوران",
+          "طراحی کافه",
+          "طراحی دفتر کار",
+          "طراحی کلینیک",
+          "طراحی سالن زیبایی",
+          "بازسازی ساختمان",
+          "تغییر کاربری",
+          "اخذ پروانه ساختمانی",
+          "ارزیابی ساختمان",
+          "طراحی سه بعدی",
+          "رندرینگ معماری",
+          "طراحی روشنایی",
+          "طراحی سیستم‌های مکانیکی"
         ],
         "areaServed": [
           "لاهیجان",
@@ -172,7 +264,19 @@ export default function RootLayout({
           "آستارا",
           "بندر انزلی",
           "صومعه سرا",
-          "فومن"
+          "فومن",
+          "آستانه اشرفیه",
+          "رودسر",
+          "تالش",
+          "ماسال",
+          "شفت",
+          "رودبار",
+          "سیاهکل",
+          "املش",
+          "لنگرود",
+          "خمام",
+          "منطقه آزاد انزلی",
+          "شمال ایران"
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
@@ -248,6 +352,36 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="manifest" href="/manifest.json" />
+        
+        {/* Favicon و آیکون‌های مختلف */}
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/Hi-logo-icon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/Hi-logo-icon.png" />
+        <link rel="icon" type="image/x-icon" href="/images/Hi-logo-icon.png" />
+        <link rel="shortcut icon" href="/images/Hi-logo-icon.png" />
+        
+        {/* Apple Touch Icons */}
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/Hi-logo-icon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/Hi-logo-icon.png" />
+        
+        {/* Android Chrome Icons */}
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/Hi-logo-icon.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/images/Hi-logo-icon.png" />
+        
+        {/* Windows Tiles */}
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="msapplication-TileImage" content="/images/Hi-logo-icon.png" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        
+        {/* Safari Pinned Tab */}
+        <link rel="mask-icon" href="/images/Hi-logo-icon.png" color="#000000" />
+        
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
