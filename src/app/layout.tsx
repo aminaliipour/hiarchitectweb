@@ -110,7 +110,13 @@ export const metadata: Metadata = {
         url: '/images/Hi-logo.png',
         width: 1200,
         height: 630,
-        alt: 'شرکت معماری های آرشیتکت',
+        alt: 'شرکت معماری های آرشیتکت - لوگو',
+      },
+      {
+        url: '/images/Hi-logo-icon.png',
+        width: 400,
+        height: 400,
+        alt: 'آیکون شرکت معماری های آرشیتکت',
       }
     ],
   },
@@ -137,28 +143,17 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
       { url: '/images/Hi-logo-icon.png', sizes: '32x32', type: 'image/png' },
-      { url: '/images/Hi-logo-icon.png', sizes: '16x16', type: 'image/png' },
-      { url: '/images/Hi-logo-icon.png', sizes: '192x192', type: 'image/png' },
-      { url: '/images/Hi-logo-icon.png', sizes: '512x512', type: 'image/png' }
+      { url: '/images/Hi-logo-icon.png', sizes: '16x16', type: 'image/png' }
     ],
-    shortcut: '/images/Hi-logo-icon.png',
+    shortcut: '/favicon.ico',
     apple: [
-      { url: '/images/Hi-logo-icon.png', sizes: '57x57', type: 'image/png' },
-      { url: '/images/Hi-logo-icon.png', sizes: '60x60', type: 'image/png' },
-      { url: '/images/Hi-logo-icon.png', sizes: '72x72', type: 'image/png' },
-      { url: '/images/Hi-logo-icon.png', sizes: '76x76', type: 'image/png' },
-      { url: '/images/Hi-logo-icon.png', sizes: '114x114', type: 'image/png' },
-      { url: '/images/Hi-logo-icon.png', sizes: '120x120', type: 'image/png' },
-      { url: '/images/Hi-logo-icon.png', sizes: '144x144', type: 'image/png' },
-      { url: '/images/Hi-logo-icon.png', sizes: '152x152', type: 'image/png' },
-      { url: '/images/Hi-logo-icon.png', sizes: '180x180', type: 'image/png' }
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
     ],
     other: [
-      { rel: 'icon', url: '/images/Hi-logo-icon.png', sizes: '32x32' },
-      { rel: 'icon', url: '/images/Hi-logo-icon.png', sizes: '16x16' },
-      { rel: 'apple-touch-icon', url: '/images/Hi-logo-icon.png', sizes: '180x180' },
-      { rel: 'mask-icon', url: '/images/Hi-logo-icon.png', color: '#000000' }
+      { rel: 'icon', url: '/favicon.ico', sizes: '32x32' },
+      { rel: 'apple-touch-icon', url: '/apple-touch-icon.png' }
     ]
   },
 };
@@ -179,11 +174,11 @@ export default function RootLayout({
         "url": "https://hiarchitect.ir",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://hiarchitect.ir/images/Hi-logo.png",
+          "url": "https://hiarchitect.ir/images/Hi-logo-icon.png",
           "width": 400,
-          "height": 200
+          "height": 400
         },
-        "image": "https://hiarchitect.ir/images/Hi-logo.png",
+        "image": "https://hiarchitect.ir/images/Hi-logo-icon.png",
         "description": "شرکت معماری و طراحی های آرشیتکت - ارائه خدمات تخصصی طراحی معماری، طراحی داخلی، نظارت و اجرای پروژه‌های تجاری، مسکونی و ویلایی در لاهیجان و گیلان",
         "address": {
           "@type": "PostalAddress",
@@ -313,7 +308,7 @@ export default function RootLayout({
         "@type": "LocalBusiness",
         "@id": "https://hiarchitect.ir/#localbusiness",
         "name": "شرکت معماری های آرشیتکت",
-        "image": "https://hiarchitect.ir/images/Hi-logo.png",
+        "image": "https://hiarchitect.ir/images/Hi-logo-icon.png",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "لاهیجان",
@@ -350,37 +345,29 @@ export default function RootLayout({
         <meta name="google-site-verification" content="your-verification-code" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
+        
+        {/* اطلاعات اضافی برای SEO */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
+        <meta name="bingbot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
+        
+        {/* اطلاعات کسب و کار */}
+        <meta name="geo.region" content="IR-GIL" />
+        <meta name="geo.placename" content="لاهیجان" />
+        <meta name="geo.position" content="37.2092;50.0017" />
+        <meta name="ICBM" content="37.2092, 50.0017" />
+        
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="manifest" href="/manifest.json" />
         
-        {/* Favicon و آیکون‌های مختلف */}
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/Hi-logo-icon.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/Hi-logo-icon.png" />
-        <link rel="icon" type="image/x-icon" href="/images/Hi-logo-icon.png" />
-        <link rel="shortcut icon" href="/images/Hi-logo-icon.png" />
+        {/* Favicon و آیکون‌های مختلف - ترتیب مهمه! */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/Hi-logo-icon.png" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         
         {/* Apple Touch Icons */}
-        <link rel="apple-touch-icon" sizes="57x57" href="/images/Hi-logo-icon.png" />
-        <link rel="apple-touch-icon" sizes="60x60" href="/images/Hi-logo-icon.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/images/Hi-logo-icon.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="/images/Hi-logo-icon.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/images/Hi-logo-icon.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="/images/Hi-logo-icon.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="/images/Hi-logo-icon.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/images/Hi-logo-icon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/Hi-logo-icon.png" />
-        
-        {/* Android Chrome Icons */}
-        <link rel="icon" type="image/png" sizes="192x192" href="/images/Hi-logo-icon.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/images/Hi-logo-icon.png" />
-        
-        {/* Windows Tiles */}
-        <meta name="msapplication-TileColor" content="#000000" />
-        <meta name="msapplication-TileImage" content="/images/Hi-logo-icon.png" />
-        <meta name="msapplication-config" content="/browserconfig.xml" />
-        
-        {/* Safari Pinned Tab */}
-        <link rel="mask-icon" href="/images/Hi-logo-icon.png" color="#000000" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

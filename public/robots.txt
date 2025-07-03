@@ -10,7 +10,7 @@ Disallow: /_next/
 Disallow: /admin/
 Disallow: /*.json$
 
-# Allow all static assets
+# Allow all static assets and important files
 Allow: /images/
 Allow: /fonts/
 Allow: *.css
@@ -21,6 +21,9 @@ Allow: *.png
 Allow: *.webp
 Allow: *.svg
 Allow: *.ico
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /manifest.json
 
 # Special instructions for specific search engines
 User-agent: Googlebot
