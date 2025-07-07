@@ -369,13 +369,13 @@ export default function RootLayout({
         <meta name="ICBM" content="37.2092, 50.0017" />
         
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        <link rel="manifest" href="/manifest.json" />
-        
-        {/* Favicon - ساده و مؤثر */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/Hi-logo-icon.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/images/Hi-logo-icon.png" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/Hi-logo-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
         
         {/* Apple Touch Icon */}
         <link rel="apple-touch-icon" sizes="180x180" href="/images/Hi-logo-icon.png" />
