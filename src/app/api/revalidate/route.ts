@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
 
     // Default revalidations
     revalidatePath('/');
-    revalidatePath('/admin/slider');
+    revalidatePath('/admin/sliders-simple');
     revalidatePath('/admin/projects/images');
     revalidateTag('sliders');
     revalidateTag('homepage');

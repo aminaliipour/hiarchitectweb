@@ -51,6 +51,7 @@ export interface IProject extends Document {
   location?: string;
   latitude?: number;
   longitude?: number;
+  view_count?: number;
   created_at: Date;
   updated_at: Date;
 }
@@ -182,6 +183,7 @@ const ProjectSchema = new Schema<IProject>({
   location: String,
   latitude: Number,
   longitude: Number,
+  view_count: { type: Number, default: 0 },
   created_at: { type: Date, default: Date.now },
   updated_at: { type: Date, default: Date.now }
 });

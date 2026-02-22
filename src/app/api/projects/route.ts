@@ -72,6 +72,7 @@ export async function GET(request: NextRequest) {
         category_name: (project.category_id as any)?.name,
         category_slug: (project.category_id as any)?.slug,
         image_count: imageCount,
+        view_count: project.view_count || 0,
         created_at: project.created_at,
         updated_at: project.updated_at
       };
@@ -97,9 +98,10 @@ export async function GET(request: NextRequest) {
     }
 
     // Get projects with pagination
+    // Sort by featured first, then by view_count (most viewed), then by created_at (newest first)
     const projects = await Project.find(query)
       .populate('category_id', 'name slug')
-      .sort({ created_at: -1 })
+      .sort({ is_featured: -1, view_count: -1, created_at: -1 })
       .skip(skip)
       .limit(limit)
       .lean();
@@ -127,6 +129,7 @@ export async function GET(request: NextRequest) {
           category_name: project.category_id?.name,
           category_slug: project.category_id?.slug,
           image_count: imageCount,
+          view_count: project.view_count || 0,
           created_at: project.created_at,
           updated_at: project.updated_at
         };

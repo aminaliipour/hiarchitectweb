@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
     // Revalidate common paths for sliders
     if (type === 'sliders') {
       revalidatePath('/');
-      revalidatePath('/admin/slider');
+      revalidatePath('/admin/sliders-simple');
       revalidateTag('sliders');
       revalidateTag('homepage');
     }

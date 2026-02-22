@@ -37,7 +37,7 @@ export default function AdminDashboard() {
         const categoriesData = await categoriesRes.json();
 
         // Load slider images count
-        const slidesRes = await fetch('/api/sliders');
+        const slidesRes = await fetch('/api/sliders-simple');
         const slidesData = await slidesRes.json();
 
         setStats({
@@ -173,7 +173,7 @@ export default function AdminDashboard() {
             </a>
 
             <a
-              href="/admin/sliders"
+              href="/admin/sliders-simple"
               className="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-purple-50 hover:border-purple-300 transition-colors"
             >
               <div className="p-2 bg-purple-100 rounded-lg ml-3">

@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import HeroSlider from "./components/hero-slider"
+import HeroSliderSimple from "./components/hero-slider-simple"
 import ProjectGrid from "./components/project-grid"
 import DesignStudio from "./components/design-studio"
 import Community from "./components/community"
@@ -73,7 +73,7 @@ export default function Home() {
         ) : (
           <main key="main" className="relative min-h-screen overflow-hidden bg-black text-white">
             <Navigation />
-            <HeroSlider />
+            <HeroSliderSimple />
             <ProjectGrid />
             <Timeline />
             <DesignStudio />

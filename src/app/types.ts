@@ -26,6 +26,7 @@ export interface Project {
   main_image?: string;
   is_featured: boolean;
   status: 'published' | 'draft' | 'archived';
+  view_count?: number;
   created_at: Date;
   updated_at: Date;
   images?: DatabaseProjectImage[];

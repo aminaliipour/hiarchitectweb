@@ -49,6 +49,13 @@ export default function ProjectDetailPage() {
             if (projectData) {
               setProject(projectData);
 
+              // Track view (don't wait for it)
+              fetch('/api/projects/track-view', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ slug })
+              }).catch(err => console.error('Failed to track view:', err));
+
               // Fetch gallery from project folder
               const galleryResponse = await fetch(`/api/projects/gallery?slug=${slug}`);
               if (galleryResponse.ok) {
