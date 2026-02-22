@@ -46,10 +46,16 @@ export function createAuthResponse(
   response: NextResponse,
   token: string
 ): NextResponse {
+  // Determine if cookies should be secure
+  // If USE_SECURE_COOKIES is explicitly set, use that value
+  // Otherwise, use secure cookies in production
+  const useSecureCookies = process.env.USE_SECURE_COOKIES === 'true' || 
+                           (process.env.USE_SECURE_COOKIES !== 'false' && process.env.NODE_ENV === 'production');
+  
   // Set the token as an HTTP-only cookie
   response.cookies.set('auth-token', token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
+    secure: useSecureCookies,
     sameSite: 'lax',
     maxAge: 7 * 24 * 60 * 60, // 7 days
     path: '/'
@@ -57,10 +63,12 @@ export function createAuthResponse(
 
   console.log('🍪 Cookie set with config:', {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
+    secure: useSecureCookies,
     sameSite: 'lax',
     maxAge: '7 days',
-    path: '/'
+    path: '/',
+    environment: process.env.NODE_ENV,
+    USE_SECURE_COOKIES: process.env.USE_SECURE_COOKIES
   });
 
   return response;
