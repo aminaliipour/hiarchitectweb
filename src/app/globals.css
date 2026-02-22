@@ -1,0 +1,339 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* برای compensation navbar */
+  /* بهینه‌سازی برای موبایل */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Enhanced smooth scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* بهینه‌سازی برای تاچ اسکرین */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* بهتر کردن performance */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar for better visual - فقط برای دسکتاپ */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #fbbf24;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f59e0b;
+  }
+}
+
+/* حذف scrollbar برای موبایل */
+@media (max-width: 767px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+
+/* Custom font faces for Vazirmatn font */
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/webfonts/Vazirmatn-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Morabba font faces */
+@font-face {
+  font-family: Morabba;
+  src: url('/fonts/Morabba.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Morabba;
+  src: url('/fonts/Morabba Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  direction: rtl;
+  font-family: Morabba, Vazirmatn, sans-serif !important;
+  min-height: 100vh;
+  /* بهینه‌سازی برای موبایل */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
+  /* بهتر کردن rendering */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background:
+    radial-gradient(circle at 70% 30%, #fbbf24 0%, #fbbf2400 40%), /* زرد لوگو */
+    radial-gradient(circle at 30% 70%, #d1d5db 0%, #d1d5db00 40%), /* خاکستری */
+    linear-gradient(135deg, #fffbe6 0%, #f3f4f6 100%); /* پس‌زمینه خیلی روشن */
+  background-blend-mode: lighten, lighten, normal;
+  background-attachment: fixed;
+}
+
+/* بهینه‌سازی برای موبایل */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* بهتر برای performance موبایل */
+  }
+}
+
+.dark body {
+  background:
+    radial-gradient(circle at 70% 30%, #fbbf24 0%, #fbbf2400 40%),
+    radial-gradient(circle at 30% 70%, #374151 0%, #37415100 40%),
+    linear-gradient(135deg, #18181b 0%, #23272e 100%);
+  background-blend-mode: lighten, lighten, normal;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .dark body {
+    background-attachment: scroll;
+  }
+}
+
+/* بهینه‌سازی‌های اضافی */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* بهبود فرم‌ها برای موبایل */
+input, textarea, select {
+  font-size: 16px; /* جلوگیری از zoom در iOS */
+}
+
+/* بهتر کردن click area برای موبایل */
+button, a {
+  min-height: 44px; /* استاندارد Apple */
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* حذف outline های پیش‌فرض و جایگزینی با focus visible */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* Utility Classes برای Responsive Design */
+@layer utilities {
+  /* Mobile First Approach */
+  .mobile-container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .tablet-container {
+    @apply px-6 mx-auto max-w-7xl;
+  }
+  
+  .desktop-container {
+    @apply px-8 mx-auto max-w-7xl;
+  }
+  
+  /* Typography مخصوص موبایل */
+  .mobile-heading {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  .mobile-text {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  
+  /* Spacing مخصوص موبایل */
+  .mobile-spacing {
+    @apply py-8 sm:py-12 md:py-16 lg:py-20;
+  }
+  
+  /* Grid responsive */
+  .responsive-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+  }
+  
+  /* Card responsive */
+  .responsive-card {
+    @apply p-4 sm:p-6 md:p-8;
+  }
+  
+  /* Button responsive */
+  .responsive-button {
+    @apply px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4;
+    @apply text-sm sm:text-base md:text-lg;
+    @apply min-h-[44px] min-w-[44px]; /* iOS standard */
+  }
+  
+  /* Navigation responsive */
+  .responsive-nav {
+    @apply h-16 sm:h-20 md:h-24;
+  }
+  
+  /* Modal responsive */
+  .responsive-modal {
+    @apply w-[95vw] sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw];
+    @apply max-w-4xl;
+  }
+}
+
+/* Animation بهینه برای موبایل */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* بهینه‌سازی برای High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* بهتر کردن کیفیت border ها */
+  .border-hairline {
+    border-width: 0.5px;
+  }
+}
+
+/* بهینه‌سازی برای iPhone notch */
+@supports (padding: max(0px)) {
+  .safe-area-inset-top {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+  
+  .safe-area-inset-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+  
+  .safe-area-inset-left {
+    padding-left: max(1rem, env(safe-area-inset-left));
+  }
+  
+  .safe-area-inset-right {
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
+/* بهینه‌سازی برای Dark Mode */
+@media (prefers-color-scheme: dark) {
+  /* بهتر کردن contrast در حالت تاریک */
+  .dark-optimized {
+    color-scheme: dark;
+  }
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- تصاویر اصلی برند -->
+  <url>
+    <loc>https://hiarchitect.ir/</loc>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/Hi-logo.png</image:loc>
+      <image:title>لوگو های آرشیتکت - دفتر معماری لاهیجان</image:title>
+      <image:caption>لوگوی رسمی دفتر معماری های آرشیتکت در لاهیجان</image:caption>
+      <image:geo_location>لاهیجان، گیلان، ایران</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/Hi-logo-icon.png</image:loc>
+      <image:title>آیکون های آرشیتکت</image:title>
+      <image:caption>آیکون برند های آرشیتکت - معماری مدرن</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/Lahijan.png</image:loc>
+      <image:title>تصویر شهر لاهیجان</image:title>
+      <image:caption>نمایی از شهر زیبای لاهیجان - محل فعالیت های آرشیتکت</image:caption>
+      <image:geo_location>لاهیجان، گیلان، ایران</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- تصاویر پروژه‌های اسلایدشو -->
+  <url>
+    <loc>https://hiarchitect.ir/#portfolio</loc>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/slides/املاک صائب.jpg</image:loc>
+      <image:title>طراحی املاک صائب - های آرشیتکت</image:title>
+      <image:caption>طراحی دفتر املاک مدرن توسط تیم های آرشیتکت لاهیجان</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/slides/بوتیک سیران.jpg</image:loc>
+      <image:title>طراحی بوتیک سیران - های آرشیتکت</image:title>
+      <image:caption>طراحی بوتیک پوشاک شیک توسط معماران های آرشیتکت</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/slides/سالن زیبایی ال بیوتی.jpg</image:loc>
+      <image:title>طراحی سالن زیبایی ال بیوتی</image:title>
+      <image:caption>طراحی سالن زیبایی لوکس در لاهیجان</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/slides/طلافروشی آوین.JPG</image:loc>
+      <image:title>طراحی طلافروشی آوین</image:title>
+      <image:caption>طراحی طلافروشی مدرن توسط های آرشیتکت</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/slides/کلینیک زیبایی سروش.jpeg</image:loc>
+      <image:title>طراحی کلینیک زیبایی سروش</image:title>
+      <image:caption>طراحی کلینیک زیبایی پیشرفته توسط های آرشیتکت لاهیجان</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/slides/ویلا بازغی.JPG</image:loc>
+      <image:title>طراحی ویلا بازغی</image:title>
+      <image:caption>طراحی ویلای لوکس توسط معماران برتر های آرشیتکت</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/slides/ویلا سوستان.jpg</image:loc>
+      <image:title>طراحی ویلا سوستان</image:title>
+      <image:caption>طراحی ویلای مدرن در منطقه سوستان</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/slides/ویلای زمیدان.jpg</image:loc>
+      <image:title>طراحی ویلای زمیدان</image:title>
+      <image:caption>طراحی ویلای باغی زیبا در منطقه زمیدان</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

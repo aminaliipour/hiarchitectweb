@@ -1,0 +1,105 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# package locks - let Liara handle dependency resolution
+package-lock.json
+yarn.lock
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# PM2 logs
+logs/
+*.log
+
+# Temporary files
+temp*
+tmp*
+*.tmp
+
+# Test files
+test-*
+*test.js
+*test.ts
+*.test.*
+
+# Debug files
+debug-*
+*debug.js
+*debug.ts
+
+# Backup files
+*.backup
+*.bak
+backup/
+
+# OS generated files
+Thumbs.db
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# IDE files
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Certificate files
+*.pem
+*.crt
+*.key
+
+# Upload files (if not needed in repo)
+uploads/
+temp-uploads/
+
+# Scripts that are environment specific
+*-local.*
+*-dev.*
+*-prod.*

@@ -1,0 +1,67 @@
+User-agent: *
+Allow: /
+
+# Primary Sitemap - بهینه شده برای های آرشیتکت
+Sitemap: https://hiarchitect.ir/sitemap.xml
+
+# Additional sitemaps for better indexing
+Sitemap: https://hiarchitect.ir/sitemap-images.xml
+Sitemap: https://hiarchitect.ir/sitemap-news.xml
+
+# Disallow admin and api routes from being crawled
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /private/
+Disallow: /temp/
+
+# Allow all static assets and important files
+Allow: /images/
+Allow: /fonts/
+Allow: /public/
+Allow: *.css
+Allow: *.js
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.webp
+Allow: *.svg
+Allow: *.ico
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /manifest.json
+
+# Special instructions for Google - بهینه برای های آرشیتکت
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /public/images/
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Local search engines
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# Block some common bad bots but allow legitimate crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MajesticSEO
+Disallow: /
