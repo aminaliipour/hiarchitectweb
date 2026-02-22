@@ -15,12 +15,16 @@ export default function AdminLogin() {
     // Check if already logged in
     const checkAuth = async () => {
       try {
-        const response = await fetch('/api/auth/me');
+        const response = await fetch('/api/auth/me', {
+          credentials: 'include' // مهم: برای ارسال کوکی
+        });
         if (response.ok) {
+          console.log('✅ Already logged in, redirecting to admin');
           router.push('/admin');
         }
       } catch (error) {
         // Not logged in, stay on login page
+        console.log('Not logged in yet');
       }
     };
 
@@ -38,6 +42,7 @@ export default function AdminLogin() {
         headers: {
           'Content-Type': 'application/json',
         },
+        credentials: 'include', // مهم: برای دریافت و ارسال کوکی‌ها
         body: JSON.stringify({ email, password }),
       });
 
@@ -53,13 +58,18 @@ export default function AdminLogin() {
         throw new Error(data.error || `خطای HTTP: ${response.status}`);
       }
 
+      console.log('✅ Login successful, redirecting...');
+
       // ذخیره token در localStorage برای client-side authentication
       if (data.token) {
         localStorage.setItem('adminToken', data.token);
       }
 
-      // Redirect to admin dashboard
-      router.push('/admin');
+      // کمی صبر کنیم تا کوکی set شود، سپس redirect کنیم
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
+      // Redirect to admin dashboard با full page reload برای اطمینان از دریافت کوکی
+      window.location.href = '/admin';
     } catch (error) {
       console.error('Login error:', error);
       
@@ -68,7 +78,6 @@ export default function AdminLogin() {
       } else {
         setError(error instanceof Error ? error.message : 'خطای ناشناخته در ورود');
       }
-    } finally {
       setIsLoading(false);
     }
   };

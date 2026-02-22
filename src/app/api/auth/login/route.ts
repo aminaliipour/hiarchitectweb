@@ -52,6 +52,9 @@ export async function POST(request: NextRequest) {
       role: user.role
     });
 
+    console.log('🔑 Generated token for user:', user.email);
+    console.log('🔑 Token (first 30 chars):', token.substring(0, 30) + '...');
+
     // Create response with token
     const response = NextResponse.json({
       message: 'ورود موفقیت‌آمیز',
@@ -63,7 +66,10 @@ export async function POST(request: NextRequest) {
       }
     });
 
-    return createAuthResponse(response, token);
+    const finalResponse = createAuthResponse(response, token);
+    console.log('✅ Login successful, cookie set for:', user.email);
+    
+    return finalResponse;
   } catch (error) {
     console.error('Login error:', error);
     return NextResponse.json(

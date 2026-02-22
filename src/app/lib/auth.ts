@@ -3,6 +3,11 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'fallback-secret';
 
+// Log JWT_SECRET on initialization (only first few chars for security)
+if (typeof window === 'undefined') {
+  console.log('🔐 JWT_SECRET loaded:', JWT_SECRET.substring(0, 10) + '...');
+}
+
 export interface AuthPayload {
   userId: string;
   email: string;
@@ -45,8 +50,17 @@ export function createAuthResponse(
   response.cookies.set('auth-token', token, {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
-    sameSite: 'strict',
-    maxAge: 7 * 24 * 60 * 60 // 7 days
+    sameSite: 'lax',
+    maxAge: 7 * 24 * 60 * 60, // 7 days
+    path: '/'
+  });
+
+  console.log('🍪 Cookie set with config:', {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'lax',
+    maxAge: '7 days',
+    path: '/'
   });
 
   return response;
