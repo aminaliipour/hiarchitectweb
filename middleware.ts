@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { verifyToken } from './src/app/lib/auth';
 import jwt from 'jsonwebtoken';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-jwt-secret-key';
@@ -44,40 +43,17 @@ export function middleware(request: NextRequest) {
       !pathname.startsWith('/admin/login')) {
     
     console.log('🔒 Middleware: Checking admin route:', pathname);
-    console.log('🍪 All cookies:', request.cookies.getAll().map(c => c.name));
     
-    // Get token from cookie or Authorization header
-    const token = request.cookies.get('auth-token')?.value ||
-                 request.headers.get('authorization')?.replace('Bearer ', '');
+    // Simple auth check - just check for admin_logged cookie
+    const isLoggedIn = request.cookies.get('admin_logged')?.value === 'true';
 
-    console.log('🔑 Token exists:', !!token);
-    if (token) {
-      console.log('🔑 Token value (first 20 chars):', token.substring(0, 20) + '...');
-    }
-
-    if (!token) {
-      console.log('❌ No token found, redirecting to login');
+    if (!isLoggedIn) {
+      console.log('❌ Not logged in, redirecting to login');
       return NextResponse.redirect(new URL('/admin/login', request.url));
     }
 
-    // Verify token
-    const payload = verifyToken(token);
-    console.log('✅ Token verification result:', payload ? 'Valid' : 'Invalid');
-    
-    if (!payload) {
-      console.log('❌ Invalid token, redirecting to login');
-      return NextResponse.redirect(new URL('/admin/login', request.url));
-    }
-
-    console.log('✅ Admin access granted to:', payload.email);
-    
-    // Add user info to headers for API routes
-    const response = NextResponse.next();
-    response.headers.set('x-user-id', payload.userId);
-    response.headers.set('x-user-email', payload.email);
-    response.headers.set('x-user-role', payload.role);
-    
-    return response;
+    console.log('✅ Admin access granted');
+    return NextResponse.next();
   }
 
   // Check if the request is for member protected routes

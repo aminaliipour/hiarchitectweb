@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import bcrypt from 'bcryptjs';
 import { connectDB, User } from '@/lib/database';
-import { generateToken, createAuthResponse } from '../../../lib/auth';
 
 export async function POST(request: NextRequest) {
   try {
@@ -45,20 +44,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Generate JWT token
-    const token = generateToken({
-      userId: user._id.toString(),
-      email: user.email,
-      role: user.role
-    });
+    console.log('✅ Login successful for user:', user.email);
 
-    console.log('🔑 Generated token for user:', user.email);
-    console.log('🔑 Token (first 30 chars):', token.substring(0, 30) + '...');
-
-    // Create response with token
+    // Simple response with cookie - no JWT needed
     const response = NextResponse.json({
       message: 'ورود موفقیت‌آمیز',
-      token: token,
       user: {
         id: user._id.toString(),
         email: user.email,
@@ -66,10 +56,16 @@ export async function POST(request: NextRequest) {
       }
     });
 
-    const finalResponse = createAuthResponse(response, token);
-    console.log('✅ Login successful, cookie set for:', user.email);
+    // Set simple auth cookie
+    response.cookies.set('admin_logged', 'true', {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax',
+      maxAge: 60 * 60 * 24 * 30, // 30 days
+      path: '/'
+    });
     
-    return finalResponse;
+    return response;
   } catch (error) {
     console.error('Login error:', error);
     return NextResponse.json(

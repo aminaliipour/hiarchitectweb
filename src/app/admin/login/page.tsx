@@ -60,15 +60,7 @@ export default function AdminLogin() {
 
       console.log('✅ Login successful, redirecting...');
 
-      // ذخیره token در localStorage برای client-side authentication
-      if (data.token) {
-        localStorage.setItem('adminToken', data.token);
-      }
-
-      // کمی صبر کنیم تا کوکی set شود، سپس redirect کنیم
-      await new Promise(resolve => setTimeout(resolve, 100));
-      
-      // Redirect to admin dashboard با full page reload برای اطمینان از دریافت کوکی
+      // Redirect to admin dashboard
       window.location.href = '/admin';
     } catch (error) {
       console.error('Login error:', error);
