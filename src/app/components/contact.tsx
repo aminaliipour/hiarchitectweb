@@ -161,13 +161,25 @@ export default function Contact() {
               >
                 <MessageCircle className="h-5 w-5" />
                 تلگرام
-              </motion.a>
+                </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://web.bale.ai/chat?uid=4314406933"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-full border border-gray-800 bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700"
+              >
+                <MessageCircle className="h-5 w-5" />
+                بله
+                </motion.a>
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="mailto:pezhmanalavi0@gmail.com"
                 className="flex items-center gap-2 rounded-full border border-gray-800 bg-black px-4 py-2 text-sm font-medium text-white hover:border-yellow-500/50"
               >
+                
                 <Mail className="h-5 w-5 text-yellow-500" />
                 info@hiarchitect.com
               </motion.a>

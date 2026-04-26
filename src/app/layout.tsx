@@ -1,18 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ServiceWorkerRegister } from "./components/ServiceWorkerRegister";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "آرشیتکت لاهیجان",
     "های آرشیتکت",
     "Hi Architect",
-    
+
     // خدمات طراحی
     "طراحی داخلی لاهیجان",
     "دکوراسیون داخلی گیلان",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "نقشه کشی ساختمان",
     "طراحی نما ساختمان",
     "طراحی پلان ساختمان",
-    
+
     // انواع پروژه‌ها
     "طراحی ویلا لاهیجان",
     "طراحی ویلا گیلان",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     "طراحی دفتر کار",
     "طراحی کلینیک",
     "طراحی سالن زیبایی",
-    
+
     // خدمات تخصصی
     "نظارت بر اجرا",
     "مشاوره معماری",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     "بازسازی ساختمان",
     "تغییر کاربری",
     "اخذ پروانه ساختمانی",
-    
+
     // مناطق خدمات‌رسانی
     "معماری رشت",
     "طراحی داخلی رشت",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     "طراحی فومن",
     "معماری آستانه اشرفیه",
     "طراحی رودسر",
-    
+
     // سبک‌های معماری
     "معماری مدرن",
     "معماری کلاسیک",
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     "معماری پایدار",
     "معماری سبز",
     "معماری اقلیمی",
-    
+
     // کلمات مرتبط
     "شرکت معماری گیلان",
     "بهترین معمار لاهیجان",
@@ -251,7 +251,7 @@ export default function RootLayout({
         },
         "serviceType": [
           "طراحی معماری",
-          "طراحی داخلی", 
+          "طراحی داخلی",
           "دکوراسیون داخلی",
           "نقشه کشی ساختمان",
           "نظارت بر اجرا",
@@ -280,7 +280,7 @@ export default function RootLayout({
         ],
         "areaServed": [
           "لاهیجان",
-          "گیلان", 
+          "گیلان",
           "رشت",
           "آستارا",
           "بندر انزلی",
@@ -312,7 +312,7 @@ export default function RootLayout({
               }
             },
             {
-              "@type": "Offer", 
+              "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
                 "name": "طراحی معماری تجاری",
@@ -322,7 +322,7 @@ export default function RootLayout({
             {
               "@type": "Offer",
               "itemOffered": {
-                "@type": "Service", 
+                "@type": "Service",
                 "name": "طراحی ویلا",
                 "description": "طراحی ویلاهای مدرن با توجه به محیط و آب و هوای گیلان"
               }
@@ -375,18 +375,18 @@ export default function RootLayout({
           }}
         />
         <meta name="google-site-verification" content="your-verification-code" />
-        
+
         {/* اطلاعات اضافی برای SEO */}
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
         <meta name="bingbot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
-        
+
         {/* اطلاعات کسب و کار */}
         <meta name="geo.region" content="IR-GIL" />
         <meta name="geo.placename" content="لاهیجان" />
         <meta name="geo.position" content="37.207050635263805, 50.009277720600316" />
         <meta name="ICBM" content="37.207050635263805, 50.009277720600316" />
-        
+
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -395,7 +395,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/images/Hi-logo-icon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/images/Hi-logo-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        
+
         {/* Apple Touch Icon */}
         <link rel="apple-touch-icon" sizes="180x180" href="/images/Hi-logo-icon.png" />
         <link rel="apple-touch-icon" sizes="152x152" href="/images/Hi-logo-icon.png" />
@@ -406,18 +406,18 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="72x72" href="/images/Hi-logo-icon.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/images/Hi-logo-icon.png" />
         <link rel="apple-touch-icon" sizes="57x57" href="/images/Hi-logo-icon.png" />
-        
+
         {/* Android Chrome Icons */}
         <link rel="icon" type="image/png" sizes="192x192" href="/images/Hi-logo-icon.png" />
         <link rel="icon" type="image/png" sizes="512x512" href="/images/Hi-logo-icon.png" />
-        
+
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="های آرشیتکت" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased`}
         suppressHydrationWarning
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>

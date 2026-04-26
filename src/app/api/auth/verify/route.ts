@@ -1,32 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getTokenFromRequest, verifyToken } from '../../../lib/auth';
 
 export async function GET(request: NextRequest) {
   try {
-    const token = getTokenFromRequest(request);
-    
-    if (!token) {
-      return NextResponse.json(
-        { error: 'توکن احراز هویت موجود نیست' },
-        { status: 401 }
-      );
-    }
+    const cookie = request.cookies.get('admin_logged');
 
-    const payload = verifyToken(token);
-    if (!payload) {
+    if (!cookie || cookie.value !== 'true') {
       return NextResponse.json(
-        { error: 'توکن نامعتبر یا منقضی شده است' },
+        { error: 'احراز هویت نشده' },
         { status: 401 }
       );
     }
 
     return NextResponse.json({
-      message: 'احراز هویت موفق',
-      user: {
-        userId: payload.userId,
-        email: payload.email,
-        role: payload.role
-      }
+      message: 'احراز هویت موفق'
     });
 
   } catch (error) {
