@@ -1,0 +1,14 @@
+{
+  "id": "699c2c7ea6a32d219adba5de",
+  "title": "مطب دکتر پاکدامن",
+  "slug": "pakdamanlab",
+  "description": "",
+  "category_id": "699326e28d63091b7067c4b1",
+  "area": null,
+  "year": null,
+  "location": null,
+  "latitude": null,
+  "longitude": null,
+  "created_at": "2026-02-23T10:31:26.132Z",
+  "database_type": "MongoDB"
+}
