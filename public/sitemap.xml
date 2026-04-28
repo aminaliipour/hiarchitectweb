@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+        http://www.google.com/schemas/sitemap-image/1.1
+        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
+  
+  <!-- صفحه اصلی - های آرشیتکت -->
+  <url>
+    <loc>https://hiarchitect.ir/</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/Hi-logo.png</image:loc>
+      <image:title>های آرشیتکت - دفتر معماری لاهیجان</image:title>
+      <image:caption>دفتر معماری های آرشیتکت در لاهیجان - طراحی داخلی و معماری مدرن</image:caption>
+    </image:image>
+  </url>
+
+  <!-- صفحات اصلی سایت - بهینه شده برای SEO -->
+  <url>
+    <loc>https://hiarchitect.ir/#about</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/#portfolio</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/#services</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/#contact</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- صفحات لندینگ برای کلمات کلیدی -->
+  <url>
+    <loc>https://hiarchitect.ir/معماری-لاهیجان</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/دفتر-معماری-لاهیجان</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/طراحی-داخلی-لاهیجان</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/معمار-لاهیجان</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- پروژه‌های تجاری - بهینه شده برای SEO -->
+  <url>
+    <loc>https://hiarchitect.ir/project/%D8%AA%D8%AC%D8%A7%D8%B1%DB%8C-%D8%A2%D8%B2%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%B1%D8%AD%D9%85%D8%A7%D9%86%DB%8C</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/projects/تجاری/آزمایشگاه رحمانی/main.jpg</image:loc>
+      <image:title>طراحی آزمایشگاه رحمانی - های آرشیتکت</image:title>
+      <image:caption>طراحی داخلی آزمایشگاه پزشکی توسط دفتر معماری های آرشیتکت لاهیجان</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/project/%D8%AA%D8%AC%D8%A7%D8%B1%DB%8C-%D8%A2%D9%88%DB%8C%D9%86-%DA%AF%D9%84%D8%AF</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/projects/تجاری/آوین گلد/main.jpg</image:loc>
+      <image:title>طراحی طلافروشی آوین گلد - های آرشیتکت</image:title>
+      <image:caption>طراحی مغازه طلافروشی مدرن توسط معماران های آرشیتکت</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/project/%D8%AA%D8%AC%D8%A7%D8%B1%DB%8C-%D8%A8%D9%88%D8%AA%DB%8C%DA%A9-%D9%84%D9%86%D8%A7</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/projects/تجاری/بوتیک لنا/main.jpg</image:loc>
+      <image:title>طراحی بوتیک لنا - های آرشیتکت لاهیجان</image:title>
+      <image:caption>طراحی داخلی بوتیک پوشاک توسط تیم معماری های آرشیتکت</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/project/%D8%AA%D8%AC%D8%A7%D8%B1%DB%8C-%D8%B3%D8%A7%D9%84%D9%86-%D8%B2%DB%8C%D8%A8%D8%A7%DB%8C%DB%8C-%D9%86%DA%AF%D8%A7%D8%B1-%D8%AD%DB%8C%D8%AF%D8%B1%DB%8C</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/projects/تجاری/سالن زیبایی نگار حیدری/main.jpg</image:loc>
+      <image:title>طراحی سالن زیبایی نگار حیدری - های آرشیتکت</image:title>
+      <image:caption>طراحی سالن زیبایی مدرن در لاهیجان توسط های آرشیتکت</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/project/%D8%AA%D8%AC%D8%A7%D8%B1%DB%8C-%DA%AF%D9%84-%D8%A7%D8%B2-%D9%85%D8%A7%D9%87%D8%A7%D9%86</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/projects/تجاری/گل از ماهان/main.jpg</image:loc>
+      <image:title>طراحی گل‌فروشی گل از ماهان - های آرشیتکت</image:title>
+      <image:caption>طراحی گل‌فروشی شیک توسط دفتر معماری های آرشیتکت لاهیجان</image:caption>
+    </image:image>
+  </url>
+
+  <!-- پروژه‌های مسکونی - با تصاویر و SEO -->
+  <url>
+    <loc>https://hiarchitect.ir/project/%D9%85%D8%B3%DA%A9%D9%88%D9%86%DB%8C-%D9%85%D8%B3%DA%A9%D9%88%D9%86%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/projects/مسکونی/مسکونی دانش/main.jpg</image:loc>
+      <image:title>طراحی خانه مسکونی دانش - های آرشیتکت</image:title>
+      <image:caption>طراحی داخلی واحد مسکونی مدرن توسط معماران های آرشیتکت لاهیجان</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/project/%D9%85%D8%B3%DA%A9%D9%88%D9%86%DB%8C-%D9%85%D8%B3%DA%A9%D9%88%D9%86%DB%8C-%DA%A9%D8%A7%D8%B1%DA%AF%D8%B114</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/projects/مسکونی/مسکونی کارگر14/main.jpg</image:loc>
+      <image:title>طراحی واحد مسکونی کارگر - های آرشیتکت</image:title>
+      <image:caption>طراحی آپارتمان مسکونی شیک توسط تیم طراحی های آرشیتکت</image:caption>
+    </image:image>
+  </url>
+
+  <!-- پروژه‌های ویلایی - لوکس و مدرن -->
+  <url>
+    <loc>https://hiarchitect.ir/project/%D9%88%DB%8C%D9%84%D8%A7%DB%8C%DB%8C-%D9%85%D8%AD%D9%88%D8%B7%D9%87-%D9%88%DB%8C%D9%84%D8%A7-%D8%B3%D8%A7%D8%AD%D9%84</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/projects/ویلایی/محوطه ویلا ساحل/main.jpg</image:loc>
+      <image:title>طراحی ویلا ساحلی - های آرشیتکت لاهیجان</image:title>
+      <image:caption>طراحی ویلای ساحلی لوکس توسط معماران برتر های آرشیتکت</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/project/%D9%88%DB%8C%D9%84%D8%A7%DB%8C%DB%8C-%D9%88%DB%8C%D9%84%D8%A7-%D9%81%D8%AF%D8%A7%DB%8C%DB%8C</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/projects/ویلایی/ویلا فدایی/main.jpg</image:loc>
+      <image:title>طراحی ویلا فدایی - های آرشیتکت</image:title>
+      <image:caption>طراحی ویلای مدرن و شیک توسط دفتر معماری های آرشیتکت لاهیجان</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/project/%D9%88%DB%8C%D9%84%D8%A7%DB%8C%DB%8C-%D9%88%DB%8C%D9%84%D8%A7-%DA%AF%D9%84%D9%BE%D9%88%D8%B1</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hiarchitect.ir/images/projects/ویلایی/ویلا گلپور/main.jpg</image:loc>
+      <image:title>طراحی ویلا گلپور - های آرشیتکت</image:title>
+      <image:caption>طراحی ویلای باغی زیبا توسط تیم حرفه‌ای های آرشیتکت</image:caption>
+    </image:image>
+  </url>
+
+  <!-- صفحات خدمات تخصصی -->
+  <url>
+    <loc>https://hiarchitect.ir/خدمات/طراحی-ویلا-لاهیجان</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/خدمات/طراحی-مغازه-لاهیجان</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/خدمات/طراحی-آپارتمان-لاهیجان</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/خدمات/بازسازی-لاهیجان</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- API و محتوای پویا -->
+  <url>
+    <loc>https://hiarchitect.ir/api/projects</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- صفحات مقالات و محتوا (آینده) -->
+  <url>
+    <loc>https://hiarchitect.ir/مقالات/ترندهای-طراحی-داخلی-2025</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/مقالات/نکات-طراحی-ویلا</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- تصاویر مهم برای SEO -->
+  <url>
+    <loc>https://hiarchitect.ir/images/Hi-logo-icon.png</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/images/Hi-logo.png</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/images/Lahijan.png</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- صفحات جغرافیایی برای Local SEO -->
+  <url>
+    <loc>https://hiarchitect.ir/مناطق/لاهیجان</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/مناطق/گیلان</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://hiarchitect.ir/مناطق/شمال-ایران</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
